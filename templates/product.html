@@ -4,7 +4,7 @@
 <title></title>
 {% endblock title %}
 
-{% block main %}
+{% block content %}
 <main class="container bg-dark">
   <h1>Продукти</h1>
     <section class="container">
@@ -13,7 +13,7 @@
             <!-- Встановлюємо ширину карточки, наприклад, на 3 з 12 можливих частин сітки, що дозволяє розмістити 4 карточки в рядок -->
             <div class="col-md-3 col-sm-6">
                 <div class="card m-3 rounded">
-                    <img src="{{ url_for('static', filename=item[6]) }}" class="card-img-rounded" alt="...">
+                    <img src="{{item[5]}}" class="card-img-rounded" alt="...">
                     <div class="card-body">
                         <h5 class="card-title">{{item[1]}}</h5>
                         <p class="card-text">{{item[2]}} грн</p>
@@ -26,4 +26,4 @@
 </section>
 
 </main>
-{% endblock main %}
+{% endblock content %}

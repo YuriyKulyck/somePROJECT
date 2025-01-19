@@ -39,8 +39,9 @@
         </li>
       </ul>
       <div class="navbar-center">
-            <button  class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo"></button>
+
       <form class="d-flex">
+             <button  class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">Каталог</button>
         <input class="form-control me-2" type="text" placeholder="Search">
         <button class="btn btn-primary" type="button">Знайти</button>
       </form>
@@ -55,9 +56,15 @@
     <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
   </div>
   <div class="offcanvas-body">
-    <p>Some text lorem ipsum.</p>
-    <p>Some text lorem ipsum.</p>
-    <p>Some text lorem ipsum.</p>
+<div class="col-md-12">
+                <ul class="list-group">
+                    <li class="list-group-item">Смартфони, ТВ і електроніка</li>
+                    <li class="list-group-item">Геймерські товари</li>
+                    <li class="list-group-item"><a href="{{ url_for('product', id_category=2) }}">Побутова техніка</a></li>
+                    <li class="list-group-item">Одяг, взуття і прикраси</li>
+                    <li class="list-group-item">Краса, догляд за здоров'ям</li>
+                </ul>
+            </div>
     <button class="btn btn-secondary" type="button">A Button</button>
   </div>
 </div>

@@ -39,3 +39,18 @@ class DBManager:
         cursor.execute("INSERT INTO Article(id_of_article, id_catalog, Content, description, Price, Look, Connections, Location, Properties_and_signs)) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)", [id_of_article, id_catalog, Content, description, Price, Look, Connections, Location, Properties_and_signs])
         self.connection.commit()
         cursor.close()
+
+    def get_products_by_catalog(self, id_catalog):
+        cursor = self.connection.cursor()
+        cursor.execute(f"SELECT * FROM Article WHERE id_catalog = {id_catalog}")
+        articles = cursor.fetchall()
+        cursor.close()
+        return articles
+
+    def get_products_by_id(self, id_of_article):
+        cursor = self.connection.cursor()
+        cursor.execute(f"SELECT * FROM Article WHERE id_of_article = {id_of_article}")
+        articles = cursor.fetchone()
+        cursor.close()
+        return articles
+
