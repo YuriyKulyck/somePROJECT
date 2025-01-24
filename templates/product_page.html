@@ -5,8 +5,94 @@
 {% endblock title %}
 
 {% block content %}
+<style>
+    .highlighted-box {
+      min-height: 300px; /* Мінімальна висота */
+      background-color: #f9f9f9; /* Світло-сірий фон */
+      padding: 20px;
+    }
+  </style>
 <main>
+    <div class ="button" style="width:200px">
+        <a href = "{{ url_for('product', id_category=2) }}" class="btn btn-outline-primary">Назад</a>
+    </div>
     <h1> Деталі продукту</h1>
-    <p>{{article[2]}}</p>
+    <div class="container mt-12">
+
+  <div class="card">
+      <div class="row">
+        <div class="col-md-4 p-3 "></div>
+        <div class="col-md-8 p-3 "></div>
+
+    <img class="card-img-top" src="{{ article[5] }}" class="card-img-top" alt="{{ article.name }}">
+    <div class="card-body">
+      <h4 class="card-title"></h4>
+
+        <div class="container mt-4">
+            <h1>Price: {{article[4]}}
+            <a href="#" class="btn btn-outline-info">Купити</a></h1>
+            <div class="col-xxl-8">
+        <div class="container-fluid mt-3">
+          <h4>{{article[2]}}</h4>
+          <img src="https://via.placeholder.com/250x150" alt="" class="img-fluid">
+        </div>
+            </div>
+        <div class ="container-fluid mt-4">
+            <h4>Опис про товар:</h4>
+            <p>{{article[3]}}</p>
+            <p><button type="button" class="btn btn-outline-secondary" data-bs-toggle="modal" data-bs-target="#myModal">
+  Зв'язатись з виробником
+  </button>
+</div>
+            <!-- The Modal -->
+<div class="modal fade" id="myModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+        <!-- Modal Header -->
+      <div class="modal-header">
+        <h4 class="modal-title">Ім'я, прізвище користувача:</h4>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <!-- Modal body -->
+      <div class="modal-body">
+        Номер телефону:
+      </div>
+
+      <!-- Modal footer -->
+      <div class="modal-footer">
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Закрити</button>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+        </div>
+            <div class ="container-fluid mt-3">
+            <h5>Особливості:</h5>
+            <p>{{article[6]}}</p>
+            </div>
+            <div class ="container-fluid mt-4">
+            <h4>Місцезнаходження:</h4>
+            <p>{{article[7]}}</p>
+            <p>{{article[8]}}</p>
+            </div>
+            <div class="container mt-3">
+              <h2>Написати відгук:</h2>
+              <form action="/action_page.php">
+                <div class="mb-3 mt-3">
+                  <label for="comment">Коментар:</label>
+                  <textarea class="form-control" rows="7" id="comment" name="text"></textarea>
+                </div>
+                <button type="submit" class="btn btn-outline-success">Надіслати.</button>
+              </form>
+            </div>
+    </div>
+  </div>
+      </div>
+  </div>
+  <br>
 </main>
 {% endblock content %}

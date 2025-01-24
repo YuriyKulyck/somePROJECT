@@ -12,29 +12,29 @@
         <link rel = "stylesheet" href="{{ url_for('static', filename='style.css') }}">
     </head>
 <body>
-<nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+<nav class="navbar navbar-expand-sm bg-success navbar-dark">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Помчали назад!">BEST</a>
+    <a class="navbar-brand" href="/" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Помчали назад!">Ми BEST!</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="collapsibleNavbar">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <a class="nav-link" href="/" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Main.">Main</a>
+          <a class="nav-link" href="/" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Головна.">Головна.</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nothing.">Nothing</a>
+          <a class="nav-link" href="/about_us" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Про нас.">Про нас.</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Nothing.">Nothing</a>
+          <a class="nav-link" href="/confidence" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Угода та права.">Угода та права.</a>
         </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Dropdown</a>
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Інформація.</a>
           <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="/">Main page</a></li>
-            <li><a class="dropdown-item" href="#">About us</a></li>
-            <li><a class="dropdown-item" href="#">Nothing yet...</a></li>
+            <li><a class="dropdown-item" href="/" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Помчали!">Головна сторінка.</a></li>
+            <li><a class="dropdown-item" href="/about_us" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Помчали!">Про нас.</a></li>
+            <li><a class="dropdown-item" href="/confidence" data-bs-toggle="tooltip" data-bs-placement="bottom" title="Помчали!">Угода та права.</a></li>
           </ul>
         </li>
       </ul>
@@ -58,11 +58,11 @@
   <div class="offcanvas-body">
 <div class="col-md-12">
                 <ul class="list-group">
-                    <li class="list-group-item">Смартфони, ТВ і електроніка</li>
-                    <li class="list-group-item">Геймерські товари</li>
+                    <li class="list-group-item"><a href="{{ url_for('product', id_category=4) }}">Смартфони, ТВ і електроніка</a></li>
+                    <li class="list-group-item"><a href="{{ url_for('product', id_category=3) }}">Геймерські товари</a></li>
                     <li class="list-group-item"><a href="{{ url_for('product', id_category=2) }}">Побутова техніка</a></li>
-                    <li class="list-group-item">Одяг, взуття і прикраси</li>
-                    <li class="list-group-item">Краса, догляд за здоров'ям</li>
+                    <li class="list-group-item"><a href="{{ url_for('product', id_category=1) }}">Одяг, взуття і прикраси</a></li>
+                    <li class="list-group-item"><a href="{{ url_for('product', id_category=5) }}">Краса, догляд за здоров'ям</a></li>
                 </ul>
             </div>
     <button class="btn btn-secondary" type="button">A Button</button>

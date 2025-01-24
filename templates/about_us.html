@@ -1,0 +1,106 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title></title>
+{% endblock title %}
+
+{% block content %}
+<div class="container py-5">
+  <!-- Заголовок сторінки -->
+  <div class="text-center mb-5">
+    <h1 class="display-4 fw-bold">Про нас</h1>
+    <p class="lead text-muted">Дізнайтеся більше про нашу компанію, нашу місію та цінності.</p>
+  </div>
+
+  <!-- Основний контент -->
+  <div class="row align-items-center mb-5">
+    <!-- Зображення -->
+    <div class="col-md-6">
+      <img
+        src="https://via.placeholder.com/600x400"
+        class="img-fluid rounded shadow"
+        alt="Команда компанії"
+      >
+    </div>
+    <!-- Текст про компанію -->
+    <div class="col-md-6">
+      <h2 class="fw-bold">Хто ми?</h2>
+      <p class="text-muted">
+        Ми - команда професіоналів, які прагнуть створити якісні продукти та послуги для наших клієнтів.
+        Наша компанія була заснована у [рік заснування] і з тих пір ми зростаємо завдяки вашій підтримці.
+      </p>
+      <p class="text-muted">
+        Наша місія - забезпечити інноваційні рішення, які допоможуть нашим клієнтам досягти успіху.
+      </p>
+      <a href="#team" class="btn btn-outline-primary">Познайомтеся з нашою командою</a>
+    </div>
+  </div>
+
+  <!-- Цінності компанії -->
+  <div class="row text-center mb-5">
+    <div class="col-md-4">
+      <div class="p-4 shadow rounded bg-light">
+        <h3 class="fw-bold">Інновації</h3>
+        <p class="text-muted">Ми завжди шукаємо нові ідеї, щоб удосконалити наші продукти та послуги.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="p-4 shadow rounded bg-light">
+        <h3 class="fw-bold">Якість</h3>
+        <p class="text-muted">Ми гарантуємо, що наші продукти відповідають найвищим стандартам.</p>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="p-4 shadow rounded bg-light">
+        <h3 class="fw-bold">Довіра</h3>
+        <p class="text-muted">Ми будуємо довгострокові стосунки з нашими клієнтами на основі довіри.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Наша команда -->
+  <div id="team" class="text-center mb-5">
+    <h2 class="fw-bold">Наша команда</h2>
+    <p class="text-muted">Познайомтеся з людьми, які стоять за нашим успіхом.</p>
+    <div class="row justify-content-center">
+      <!-- Член команди 1 -->
+      <div class="col-md-3">
+        <img
+          src="https://via.placeholder.com/150"
+          class="rounded-circle mb-3 shadow"
+          alt="Член команди"
+        >
+        <h5 class="fw-bold">Ім'я Прізвище</h5>
+        <p class="text-muted">Посада</p>
+      </div>
+      <!-- Член команди 2 -->
+      <div class="col-md-3">
+        <img
+          src="https://via.placeholder.com/150"
+          class="rounded-circle mb-3 shadow"
+          alt="Член команди"
+        >
+        <h5 class="fw-bold">Ім'я Прізвище</h5>
+        <p class="text-muted">Посада</p>
+      </div>
+      <!-- Член команди 3 -->
+      <div class="col-md-3">
+        <img
+          src="https://via.placeholder.com/150"
+          class="rounded-circle mb-3 shadow"
+          alt="Член команди"
+        >
+        <h5 class="fw-bold">Ім'я Прізвище</h5>
+        <p class="text-muted">Посада</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Заклик до дії -->
+  <div class="text-center">
+    <h2 class="fw-bold">Приєднуйтесь до нас</h2>
+    <p class="text-muted">Ми завжди відкриті до нових ідей та співпраці. Зв'яжіться з нами, щоб дізнатися більше.</p>
+    <a href="/contact" class="btn btn-primary btn-lg">Зв'язатися з нами</a>
+  </div>
+</div>
+{% endblock content %}

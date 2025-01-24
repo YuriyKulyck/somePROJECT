@@ -1,0 +1,96 @@
+
+{% extends 'base.html' %}
+
+{% block title %}
+<title></title>
+{% endblock title %}
+
+{% block content %}
+<div class="container py-5">
+  <!-- Заголовок сторінки -->
+  <div class="text-center mb-5">
+    <h1 class="display-4 fw-bold">Угода та права підприємства</h1>
+    <p class="lead text-muted">
+      Ласкаво просимо до нашого інтернет-магазину. Ознайомтеся з нашими правилами, умовами використання, а також правами компанії.
+    </p>
+  </div>
+
+  <!-- Основний текст -->
+  <div class="row mb-5">
+    <div class="col-lg-8 mx-auto">
+      <div class="bg-light p-4 rounded shadow">
+        <h2 class="fw-bold">1. Умови використання сайту</h2>
+        <p class="text-muted">
+          Використовуючи наш вебсайт, ви погоджуєтеся з нашими умовами. Заборонено розміщувати незаконний контент, порушувати права інших користувачів, або використовувати сайт у шкідливих цілях.
+        </p>
+        <p class="text-muted">
+          Компанія залишає за собою право блокувати акаунти користувачів, які порушують правила, без попереднього повідомлення.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Розділи -->
+  <div class="row text-center">
+    <!-- Розділ 1 -->
+    <div class="col-md-4">
+      <div class="p-4 shadow rounded bg-light h-100">
+        <h3 class="fw-bold">Конфіденційність</h3>
+        <p class="text-muted">
+          Ваша особиста інформація захищена. Ми не передаємо дані третім сторонам без вашої згоди.
+        </p>
+      </div>
+    </div>
+    <!-- Розділ 2 -->
+    <div class="col-md-4">
+      <div class="p-4 shadow rounded bg-light h-100">
+        <h3 class="fw-bold">Права компанії</h3>
+        <p class="text-muted">
+          Ми маємо право вносити зміни до сайту, умов користування та цін без попереднього повідомлення.
+        </p>
+      </div>
+    </div>
+    <!-- Розділ 3 -->
+    <div class="col-md-4">
+      <div class="p-4 shadow rounded bg-light h-100">
+        <h3 class="fw-bold">Гарантії</h3>
+        <p class="text-muted">
+          Компанія гарантує якість товарів, що відповідає опису, але не несе відповідальності за використання товарів не за призначенням.
+        </p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Детальний текст -->
+  <div class="row mt-5">
+    <div class="col-lg-10 mx-auto">
+      <div class="bg-light p-4 rounded shadow">
+        <h2 class="fw-bold">2. Права та обов'язки користувачів</h2>
+        <p class="text-muted">
+          Користувачі мають право:
+        </p>
+        <ul class="text-muted">
+          <li>Отримувати повну інформацію про товари та послуги.</li>
+          <li>Ставити запитання перед покупкою.</li>
+          <li>Оформляти замовлення згідно з інструкціями на сайті.</li>
+        </ul>
+        <p class="text-muted">
+          Користувачі зобов’язані:
+        </p>
+        <ul class="text-muted">
+          <li>Надавати правдиву інформацію під час реєстрації.</li>
+          <li>Не використовувати сайт у незаконних цілях.</li>
+          <li>Дотримуватися законів та правил країни проживання.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Заклик до дії -->
+  <div class="text-center mt-5">
+    <h2 class="fw-bold">Потрібна допомога?</h2>
+    <p class="text-muted">Якщо у вас є питання щодо наших умов або прав, зв'яжіться з нами.</p>
+    <a href="/contact" class="btn btn-primary btn-lg">Контакти</a>
+  </div>
+</div>
+{% endblock content %}
