@@ -14,6 +14,18 @@ def about_us():
 @app.route("/confidence")
 def confidence():
     return render_template("confidence.html")
+@app.route("/login")
+def login():
+    return render_template("login.html")
+@app.route("/register")
+def register():
+    return render_template("register.html")
+@app.route("/profile")
+def profile():
+    return render_template("profile.html")
+@app.route('/cart')
+def cart():
+    return render_template("cart.html")
 @app.route("/products_by_catagory/<id_category>")
 def product(id_category):
     dbmanager = DBmanager.DBManager("db_name.sql")
@@ -23,5 +35,6 @@ def product(id_category):
 def product_page(item_id):
     dbmanager = DBmanager.DBManager("db_name.sql")
     article = dbmanager.get_products_by_id(item_id)
-    return render_template("product_page.html",article=article)
+    is_registered = True
+    return render_template("product_page.html",article=article, is_registered=is_registered)
 app.run()

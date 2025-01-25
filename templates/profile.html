@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Профіль користувача</title>
+{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+    <div class="row mb-4">
+        <div class="col-12 text-center">
+            <h2>Профіль користувача</h2>
+            <p class="lead">Вітаємо вас на вашій персональній сторінці!</p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <img src="#" alt="Фото профілю" class="img-fluid rounded-circle mb-3" style="max-width: 150px;">
+                    <h4>Ім'я користувача</h4>
+                    <p>email@example.com</p>
+                    <button class="btn btn-outline-primary w-100">Редагувати профіль</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div class="card shadow-sm">
+                <div class="card-body">
+                    <h4 class="card-title">Інформація профілю</h4>
+                    <p>Ім'я: <strong>Пусто</strong></p>
+                    <p>Email: <strong>Пусто</strong></p>
+                    <p>Телефон: <strong>Пусто</strong></p>
+                    <p>Адреса: <strong>Пусто</strong></p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-12">
+            <div class="card shadow-sm">
+                <div class="card-body text-center">
+                    <h4 class="card-title">Ваш кошик</h4>
+                    <a href="/cart" class="btn btn-outline-secondary">Перейти до кошика</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row mt-4">
+        <div class="col-12 text-center">
+            <button class="btn btn-danger w-100">Вийти з акаунту</button>
+        </div>
+    </div>
+</div>
+{% endblock content %}

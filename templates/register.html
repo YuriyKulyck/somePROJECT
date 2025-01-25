@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Реєстрація</title>
+{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-md-6">
+      <div class="card shadow-lg">
+        <div class="card-body">
+          <h2 class="text-center mb-4">Створіть свій акаунт.</h2>
+          <form method="POST" action="/register">
+            <!-- Full Name -->
+            <div class="mb-3">
+              <label for="fullName" class="form-label">Ім'я, прізвище:</label>
+              <input
+                type="text"
+                class="form-control"
+                id="fullName"
+                name="fullName"
+                placeholder="Enter your full name"
+                required
+              >
+            </div>
+
+            <!-- Email -->
+            <div class="mb-3">
+              <label for="email" class="form-label">Електронна пошта:</label>
+              <input
+                type="email"
+                class="form-control"
+                id="email"
+                name="email"
+                placeholder="Enter your email"
+                required
+              >
+            </div>
+
+            <!-- Password -->
+            <div class="mb-3">
+              <label for="password" class="form-label">Пароль:</label>
+              <input
+                type="password"
+                class="form-control"
+                id="password"
+                name="password"
+                placeholder="Create a password"
+                required
+              >
+            </div>
+
+            <!-- Confirm Password -->
+            <div class="mb-3">
+              <label for="confirmPassword" class="form-label">Підтвердіть пароль:</label>
+              <input
+                type="password"
+                class="form-control"
+                id="confirmPassword"
+                name="confirmPassword"
+                placeholder="Confirm your password"
+                required
+              >
+            </div>
+
+            <!-- Register Button -->
+            <div class="d-grid mb-3">
+              <button type="submit" class="btn btn-success">Зареєструвати.</button>
+            </div>
+
+            <!-- Divider -->
+            <div class="text-center">
+              <span>or</span>
+            </div>
+
+            <!-- Login Link -->
+            <div class="text-center mt-3">
+              <p>Уже існує акаунт? <a href="/login" class="text-primary">Увійдіть.</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock content %}

@@ -1,0 +1,40 @@
+{% extends 'base.html' %}
+
+{% block title %}
+<title>Кошик</title>
+{% endblock title %}
+
+{% block content %}
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Ваш кошик</h1>
+
+  <!-- Список товарів -->
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Назва товару</h5>
+      <p class="card-text">Опис товару або додаткова інформація.</p>
+      <p class="card-text"><strong>Ціна:</strong> 500 грн</p>
+      <button class="btn btn-danger btn-sm">Видалити</button>
+    </div>
+  </div>
+
+  <div class="card mb-3">
+    <div class="card-body">
+      <h5 class="card-title">Назва товару 2</h5>
+      <p class="card-text">Опис товару або додаткова інформація.</p>
+      <p class="card-text"><strong>Ціна:</strong> 1200 грн</p>
+      <button class="btn btn-danger btn-sm">Видалити</button>
+    </div>
+  </div>
+
+  <!-- Якщо кошик порожній -->
+  <div class="alert alert-warning text-center mt-4">
+    Ваш кошик порожній. <a href="/" class="alert-link">Перейдіть до головної сторінки.</a>.
+  </div>
+
+  <!-- Кнопка "Вийти" -->
+  <div class="text-center mt-5">
+    <a href="/profile" class="btn btn-danger btn-lg">Вийти</a>
+  </div>
+</div>
+{% endblock content %}
